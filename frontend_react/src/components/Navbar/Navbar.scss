@@ -21,7 +21,7 @@
 
   img {
     width: 25%;
-    height: 25%;
+    height: 2%;
 
     @media screen and (min-width: 2000px) {
       width: 180px;
@@ -66,6 +66,11 @@
         color: var(--secondary-color);
       }
 
+    }
+    &:hover {
+      div {
+        background: var(--secondary-color);
+      }
     }
   }
 }
