@@ -11,7 +11,7 @@ const Header = () => {
       <motion.div
         whileInView={{x: [-100, 0], opacity: [0,1]}}
         transition={{duration: 0.5}}
-        className='app__info'>
+        className='app__header-info'>
           <div className='app__header-badge'>
             <div className='badge-cmp app__flex'>
               <span>
@@ -28,6 +28,19 @@ const Header = () => {
             </div>
           </div>
       </motion.div>
+
+    <motion.div
+            whileInView={{ opacity: [0,1]}}
+            transition={{duration: 0.5, delayChildren: 0.5 }}
+            className='app__header-img'>
+              <img src={images.profile} alt='profile_bg'>
+              </img>
+    </motion.div>
+
+    <motion.div>
+      
+    </motion.div>
+
       </div>
   )
 }
