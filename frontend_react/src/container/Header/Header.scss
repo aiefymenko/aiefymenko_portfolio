@@ -67,11 +67,24 @@
   .tag-cmp {
     flex-direction: column;
     margin-top: 3rem;
+    
+    p {
+      width: 100%;
+      text-transform: uppercase;
+      text-align: right;
+    }
   }
 
-  p {
-    width: 100%;
-    text-transform: uppercase;
-    text-align: right;
+  span {
+    font-size: 2.5rem;
+
+    @media screen and (min-width: 2000px) {
+      font-size: 5rem;
+      
+    }
+  }
+  @media screen and (max-width: 1200px) {
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 }
