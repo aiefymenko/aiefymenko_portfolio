@@ -12,11 +12,18 @@
   margin-top: 2rem;
 }
 
-.app__profiles-item {
+.app__profile-item {
   width: 190px;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
   margin: 2rem;
+
+  img {
+    width: 100%;
+    height: 170px;
+    border-radius: 15px;
+    object-fit: cover;
+  }
 }

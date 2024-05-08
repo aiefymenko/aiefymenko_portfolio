@@ -8,7 +8,7 @@ const abouts = [
   {title: 'Front End', description: 'I am a good web developer',imgUrl: images.about01},
   {title: 'Back End', description: 'I am a good web developer',imgUrl: images.about02},
   {title: 'Full Stack', description: 'I am a good web developer',imgUrl: images.about03},
-  {title: 'Web animation', description: 'I am a good web developer',imgUrl: images.about04}
+  {title: 'Software development', description: 'I am a good web developer',imgUrl: images.about04}
 ];
 
 const About = () => {
