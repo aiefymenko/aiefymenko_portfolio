@@ -5,22 +5,16 @@ import {images} from '../../constants'
 import './About.scss';
 
 const abouts = [
-  {title: 'Front End', description: 'I am a good web developer',imgUrl: images.about01},
-  {title: 'Back End', description: 'I am a good web developer',imgUrl: images.about02},
-  {title: 'Full Stack', description: 'I am a good web developer',imgUrl: images.about03},
-  {title: 'Software development', description: 'I am a good web developer',imgUrl: images.about04}
+  {title: 'Frontend Development', description: 'I am a good web developer',imgUrl: images.about01},
+  {title: 'Backend Development', description: 'I am a good web developer',imgUrl: images.about02},
+  {title: 'Full Stack Development', description: 'I am a good web developer',imgUrl: images.about03},
+  {title: 'Software Development', description: 'I am a good web developer',imgUrl: images.about04}
 ];
 
 const About = () => {
   return (
 <>
-    <h2 className='head-text'>
-      I know that
-      <span>Good design</span>
-      <br/>
-      means
-      <span>Good business</span>
-      </h2>
+    <h2 className='head-text'> I know that <span>Good Development</span> <br/> means <span>Good business</span></h2>
 
       <div className='app__profiles'>
       {abouts.map((about, index) => (
