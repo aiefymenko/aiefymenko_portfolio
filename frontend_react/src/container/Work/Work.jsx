@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import {AiFillEye, AiFillGithub} from 'react-icons/ai';
-import {easeInOut, motion} from 'framer-motion';
+import {motion} from 'framer-motion';
 
 import {AppWrap} from '../../wrapper';
 import {urlFor, client} from '../../client';
@@ -24,7 +24,8 @@ client.fetch(query)
   setFilterWork(data);
 })
 
-}, [])
+}, []);
+
 
 
 const handleWorkFilter = (item) =>{
@@ -60,7 +61,7 @@ const handleWorkFilter = (item) =>{
             transition={{duration:0.25, ease:'easeInOut', staggerChildren: 0.5}}
             className='app__work-hover app__flex'
             >
-              <a href={work.projectLink} target='_blank' rel='noreferrer'>
+              {work.projectLink ? <a href={work.projectLink} target='_blank' rel='noreferrer'>
                 <motion.div
                 whileInView={{scale: [0,1]}}
                 whileHover={{scale: [0, 0.9]}}
@@ -69,7 +70,7 @@ const handleWorkFilter = (item) =>{
                 >
                   <AiFillEye />
                 </motion.div>
-              </a>
+              </a> :null}
               <a href={work.codeLink} target='_blank' rel='noreferrer'>
                 <motion.div
                 whileInView={{scale: [0,1]}}
@@ -82,6 +83,13 @@ const handleWorkFilter = (item) =>{
               </a>
             </motion.div>
           </div>
+          <div className='app__work-content app__flex'>
+            <h4 className='bold-text'>{work.title}</h4>
+            <p className='p-text' style={{marginTop: 10}}>{work.description}</p>
+            <div className='app__work-tag app__flex'>
+              {work.tags ? <p className='p-text'>{work.tags[0]}</p> :null}
+            </div>
+          </div>
         </div>
       ))}
     </motion.div>
@@ -89,4 +97,4 @@ const handleWorkFilter = (item) =>{
   )
 }
 
-export default Work
+export default AppWrap(Work, 'work');
