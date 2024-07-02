@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import {Tooltip as ReactTooltip} from 'react-tooltip';
 
-// import { AppWrap, MotionWrap } from '../../wrapper';
+import { AppWrap } from '../../wrapper';
 import { urlFor, client } from '../../client';
 import './Skills.scss';
 
@@ -16,12 +16,10 @@ const Skills = () => {
 
     client.fetch(query).then((data) => {
       setExperiences(data);
-      console.log("Experiences fetched:", data); // Debugging
     });
 
     client.fetch(skillsQuery).then((data) => {
       setSkills(data);
-      console.log("Skills fetched:", data); // Debugging
     });
   }, []);
 
@@ -76,6 +74,7 @@ const Skills = () => {
                       arrowColor="#fff"
                       className="skills-tooltip"
                     >
+                      {console.log(work.desc)}
                       {work.desc}
                     </ReactTooltip>
                   </React.Fragment>
@@ -89,4 +88,4 @@ const Skills = () => {
   );
 };
 
-export default Skills
+export default AppWrap(Skills, 'skills');
